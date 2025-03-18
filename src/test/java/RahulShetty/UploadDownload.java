@@ -39,7 +39,7 @@ public class UploadDownload {
 		int row = getRowNumber(fileName, "Apple");
 		Assert.assertTrue(updateCell(fileName, row, col, updatedValue));
 
-		// upload
+		// upload file, below works only with element type as File
 		WebElement upload = driver.findElement(By.cssSelector("input[type='file']"));
 		upload.sendKeys("C:/Users/chand/Downloads/download.xlsx");
 

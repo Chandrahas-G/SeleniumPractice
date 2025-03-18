@@ -1,4 +1,4 @@
-	package Java;
+package Java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,8 +41,8 @@ public class Streams {
 		Names.add("Raju");
 		Names.add("Ajay");
 
-		long C = Names.stream().filter(s -> s.startsWith("A")).count(); // filter method checks parelelly unlike for
-																		// loop(checks 1 by 1) and saves excution time.
+		long C = Names.stream().filter(s -> s.startsWith("A")).count(); // filter method checks parallelly unlike for
+																		// loop(checks 1 by 1) and saves execution time.
 		System.out.println(C);
 
 		// creation of steam directly instead of converting
@@ -72,7 +72,7 @@ public class Streams {
 				.forEach(s -> System.out.println(s));
 
 		// print names starts with A in uppercase in alphabetical order
-		List<String> names = Arrays.asList("Arjun", "Abijit", "Ramu", "Raju"); // converted array to arrayList
+		List<String> names = Arrays.asList("Arjun", "Abijit", "Ramu", "Raju"); // converted array(of strings) to arrayList
 		names.stream().filter(s -> s.startsWith("A")).sorted().map(s -> s.toLowerCase())
 				.forEach(s -> System.out.println(s));
 

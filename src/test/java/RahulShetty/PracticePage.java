@@ -20,9 +20,9 @@ public class PracticePage {
 
 		// Tables(driver);
 		// DynamicElements(driver);
-		// Alerts(driver);
+		 Alerts(driver);
 		// CheckBox(driver);
-		SuggestiveDropdown2(driver);
+		// SuggestiveDropdown2(driver);
 
 		driver.close();
 	}
@@ -39,7 +39,7 @@ public class PracticePage {
 				break;	
 				}
 			}
-		System.out.println(driver.findElement(By.cssSelector("input#autocomplete")).getAttribute("value"));
+		System.out.println(driver.findElement(By.cssSelector("input#autocomplete")).getDomAttribute("value"));
 	}
 	
 	public static void SuggestiveDropdown(WebDriver driver) throws InterruptedException {
@@ -51,7 +51,7 @@ public class PracticePage {
 		a.moveToElement(driver.findElement(By.xpath("//div[@class='ui-menu-item-wrapper' and text()='India']"))).click().build().perform();
 		//Thread.sleep(1000);
 		
-		System.out.println(driver.findElement(By.cssSelector("input#autocomplete")).getAttribute("value"));
+		System.out.println(driver.findElement(By.cssSelector("input#autocomplete")).getDomAttribute("value"));
 		
 	}
 	

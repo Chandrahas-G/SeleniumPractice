@@ -57,10 +57,10 @@ public class Miscellaneous {
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
 		List<WebElement> links = driver.findElements(By.cssSelector("li[class='gf-li'] a"));
-		SoftAssert a=new SoftAssert(); // soft assertions wont make the scripts stop abruptly, it continues until script completed.
+		SoftAssert a=new SoftAssert(); // soft assertions won't make the scripts stop abruptly, it continues until script completed.
 		for (WebElement link : links) {
 
-			String url = link.getAttribute("href");
+			String url = link.getDomAttribute("href");
 
 			HttpURLConnection conn = (HttpURLConnection) new URI(url).toURL().openConnection();
 			conn.setRequestMethod("HEAD");

@@ -32,7 +32,7 @@ public class SpiceJet {
 		//radio button
 		driver.findElement(By.xpath("//div[text()='round trip']//parent::div[@class='css-1dbjc4n']//preceding-sibling::div[@class='css-1dbjc4n r-zso239']//*[name()='svg']//*[name()='circle' and contains(@cx,'9')]")).click();
 		//checking of Return Date calender is enabled
-		Assert.assertTrue(driver.findElement(By.xpath("//div[text()='Return Date']")).getAttribute("style").contains("1"));
+		Assert.assertTrue(driver.findElement(By.xpath("//div[text()='Return Date']")).getDomAttribute("style").contains("1"));
 	}
 
 	public static void FromTo(WebDriver driver) throws InterruptedException {

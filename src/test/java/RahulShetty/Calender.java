@@ -12,10 +12,12 @@ public class Calender {
 
 	public static void main(String[] args) {
 
+		// Storing values in Strings separately
 		String Month = "12";
 		String Date = "21";
 		String Year = "1999";
 
+		// Expected values in an Array of String
 		String[] ExpectedValue = { "12", "21", "1999" };
 
 		WebDriver driver = new ChromeDriver();
@@ -34,14 +36,16 @@ public class Calender {
 
 		List<WebElement> SelectedValue = driver.findElements(By.cssSelector("input.react-date-picker__inputGroup__input"));
 
+		// Matching each value, one by one with For loop
 		for (int i = 0; i < SelectedValue.size(); i++) {
 
-			// System.out.println("Selected is: "+SelectedValue.get(i).getAttribute("value"));
+			// System.out.println("Selected is:
+			// "+SelectedValue.get(i).getAttribute("value"));
 			// System.out.println("Expected is: "+ExpectedValue[i]);
 
-			Assert.assertEquals(SelectedValue.get(i).getAttribute("value"), ExpectedValue[i]);
+			Assert.assertEquals(SelectedValue.get(i).getDomAttribute("value"), ExpectedValue[i]);
 		}
-
+		driver.close();
 	}
 
 }

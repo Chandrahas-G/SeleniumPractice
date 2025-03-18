@@ -65,6 +65,7 @@ public class UploadFile {
 		driver.findElement(By.cssSelector("a#pickfiles")).click();
 		Thread.sleep(5000);
 
+		// Fetching file & verifying if downloaded
 		File f = new File(downloadPath + "/Chandrahas G Resume.pdf");
 		Assert.assertTrue(f.exists());
 		if (f.delete())
